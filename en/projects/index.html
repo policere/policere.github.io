@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Программы | theskrutter</title>
+		<style>
+			quote 
+			{
+				font-style: italic;
+			}
+			sttext 
+			{
+				font-size: 16px;
+				background-color: #e6e6e6;
+			}
+			sttitle 
+			{
+				font-size: 26px;
+				font-style: bold;
+				background-color: #e6e6e6;
+			}
+			div.stdivtitle
+			{
+				background-color: #e6e6e6;
+				padding: .7em 16em;
+			}
+			div.stdivtext
+			{
+				background-color: #e6e6e6;
+				padding: .7em 26em;
+			}
+			input.headbtn
+			{
+				color: #fff;
+				text-decoration: none;
+				user-select: none;
+				background: rgb(212,75,56);
+				padding: .7em 1.5em;
+				outline: none;
+			}
+			input.headbtn:hover { background: rgb(232,95,76); }
+			input.headbtn:active { background: rgb(152,15,0); }
+			input.headbtna
+			{
+				color: #fff;
+				text-decoration: none;
+				user-select: none;
+				background: #6DE899;
+				padding: .7em 1.5em;
+				outline: none;
+			}
+			input.headbtna:hover { background: #60CF88; }
+			input.headbtna:active { background: #8BD2A4; }
+			form.headForm
+			{
+				background-color: #e6e6e6;
+				padding: .7em 1.5em;
+			}
+			body
+			{
+				background-color: #f2f2f2;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="HeadDiv">
+			<form class="headForm">
+				<input type="button" value="Главная" id="MainPageBtn" class="headbtn">
+				<input type="button" value="Игры" id="MyGamesBtn" class="headbtn">
+				<input type="button" value="Проекты" id="MyProgsBtn" class="headbtna">
+				<input type="button" value="Про меня и мои новости" id="AboutMBtn" class="headbtn">
+				<script>
+					var mp_btn = document.getElementById('MainPageBtn');
+					var mygames_btn = document.getElementById('MyGamesBtn');
+					var myprogs_btn = document.getElementById('MyProgsBtn');
+					var aboutm_btn = document.getElementById('AboutMBtn');
+
+					mp_btn.onclick = function() { window.location.href = 'https://policere.github.io/'; }
+					mygames_btn.onclick = function() { window.location.href = 'https://policere.github.io/games' }
+					myprogs_btn.onclick = function() { window.location.href = '#' }
+					aboutm_btn.onclick = function() { window.location.href = 'https://policere.github.io/aboutmeandnews' }
+				</script>
+			</form>
+		</div>
+		<br><br>
+		<div id="ContentDiv">
+			<div class="stdivtitle"><sttitle><img src="./img/unactual.png"> Чит ПО "Manaco". Проект закрыт</sttitle></div><br>
+			<div class="stdivtext"><sttext>На данный момент, кхм... кхм... проект, я закрыл. Да, теперь читерить в роблоксе с помощью моего чита не сможете, т.к. я закрыл проект, и последние версии заблокированы.</sttext></div>
+			<div class="stdivtext"><sttext>Вот ссылочка на скачивание: <a href="#">[Последняя версия не будет работать!]</a></sttext></div><br><br>
+
+			<div class="stdivtitle"><sttitle><img src="./img/actual.png"> Дискорд Бот "RolePlayBot" (Python38)</sttitle></div><br>
+			<div class="stdivtext"><sttext>Во первых, проект ТОЛЬКО на начальной стадии, и пока, исходный код будет скидоватся частями</sttext></div>
+			<div class="stdivtext"><sttext>Ссылочки на исходный код:<br>rpb-alpha_py3.8.5-1.0.0-source <a href="policere.github.io/download/roleplaybot_source.py3.8.5-v1.0.0.rar">Скачать py3.8.5-rpb1.0.0 [С сайта]</a></sttext></div>
+		</div>
+	</body>
+</html>
