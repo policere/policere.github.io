@@ -1,92 +1,33 @@
 <!DOCTYPE html>
 <html>
-	<head>
-
-		<title>Главная | theskrutter</title>
-		<style>
-			quote 
-			{
-				font-style: italic;
-			}
-			sttext 
-			{
-				font-size: 16px;
-				background-color: #e6e6e6;
-			}
-			sttitle 
-			{
-				font-size: 26px;
-				font-style: bold;
-				background-color: #e6e6e6;
-			}
-			div.stdivtitle
-			{
-				background-color: #e6e6e6;
-				padding: .7em 16em;
-			}
-			div.stdivtext
-			{
-				background-color: #e6e6e6;
-				padding: .7em 26em;
-			}
-			input.headbtn
-			{
-				color: #fff;
-				text-decoration: none;
-				user-select: none;
-				background: rgb(212,75,56);
-				padding: .7em 1.5em;
-				outline: none;
-			}
-			input.headbtn:hover { background: rgb(232,95,76); }
-			input.headbtn:active { background: rgb(152,15,0); }
-			input.headbtna
-			{
-				color: #fff;
-				text-decoration: none;
-				user-select: none;
-				background: #6DE899;
-				padding: .7em 1.5em;
-				outline: none;
-			}
-			input.headbtna:hover { background: #60CF88; }
-			input.headbtna:active { background: #8BD2A4; }
-			form.headForm
-			{
-				background-color: #e6e6e6;
-				padding: .7em 1.5em;
-			}
-			body
-			{
-				background-color: #f2f2f2;
-			}
-		</style>
+	<head><title>Policere | Checking</title>
 	</head>
-
 	<body>
-		<div class="HeadDiv">
-			<form class="headForm">
-				<input type="button" value="Главная" id="MainPageBtn" class="headbtna">
-				<input type="button" value="Игры" id="MyGamesBtn" class="headbtn">
-				<input type="button" value="Проекты" id="MyProgsBtn" class="headbtn">
-				<input type="button" value="Про меня и мои новости" id="AboutMBtn" class="headbtn">
-				<script>
-					var mp_btn = document.getElementById('MainPageBtn');
-					var mygames_btn = document.getElementById('MyGamesBtn');
-					var myprogs_btn = document.getElementById('MyProgsBtn');
-					var aboutm_btn = document.getElementById('AboutMBtn');
-
-					mp_btn.onclick = function() { window.location.href = '#'; }
-					mygames_btn.onclick = function() { window.location.href = 'https://policere.github.io/games' }
-					myprogs_btn.onclick = function() { window.location.href = 'https://policere.github.io/projects' }
-					aboutm_btn.onclick = function() { window.location.href = 'https://policere.github.io/aboutmeandnews' }
-				</script>
-			</form>
-		</div>
-		<br><br>
-		<div id="ContentDiv">
-			<div class="stdivtitle"><sttitle> Кто такой Артём Котов? Что за никнейм theskrutter</sttitle></div><br>
-			<div class="stdivtext"><sttext>Всем привет, читатели <quote>policere.github.io</quote>, Артём Котов - создатель этого сайта, владелец ника theskrutter. Все аккаунты и соц.сети можете подробнее разузнать в вкладке <a href="https://policere.github.io/aboutmeandnews">Про меня и новости</a>. Я знаю, что сайт выглядит не лучшым образом, ну что-ж поделаешь, я не на веб-разработчика учился, хотя и смог САМ запилить такой примитивный сайт. Всем приятного прочтения!</sttext></div>
-		</div>
+		<script>
+			var locale = navigator.userLanguage || navigator.language || NaN;
+			var pageloaded = false;
+			if (locale == NaN)
+			{
+				alert("An error ocuraied on getting language")
+			}
+			if (locale == "ru-RU")
+			{
+				window.location.href = "https://policere.github.io/ru/";
+				pageloaded = true
+			} 
+			else 
+			{
+				if (locale != "en-US" || locale != "en")
+				{
+					alert("We don't support you language!\nYou locale: ("+locale+").")
+				}
+				window.location.href = "https://policere.github.io/en/";
+				pageloaded = true;
+			}
+			if (!pageloaded)
+			{
+				alert("Unkown error!")
+			}
+		</script>
 	</body>
 </html>
