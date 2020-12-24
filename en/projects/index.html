@@ -2,7 +2,7 @@
 <html>
 	<head>
 
-		<title>Программы | theskrutter</title>
+		<title>Programs | theskrutter</title>
 		<style>
 			quote 
 			{
@@ -60,6 +60,11 @@
 			{
 				background-color: #f2f2f2;
 			}
+			img.langimg
+			{
+				position: fixed;
+				right: 10px;
+			}
 		</style>
 	</head>
 
@@ -70,16 +75,17 @@
 				<input type="button" value="Игры" id="MyGamesBtn" class="headbtn">
 				<input type="button" value="Проекты" id="MyProgsBtn" class="headbtna">
 				<input type="button" value="Про меня и мои новости" id="AboutMBtn" class="headbtn">
+				<img src="img/en.png" width=42 height=32 class="langimg">
 				<script>
 					var mp_btn = document.getElementById('MainPageBtn');
 					var mygames_btn = document.getElementById('MyGamesBtn');
 					var myprogs_btn = document.getElementById('MyProgsBtn');
 					var aboutm_btn = document.getElementById('AboutMBtn');
 
-					mp_btn.onclick = function() { window.location.href = 'https://policere.github.io/'; }
-					mygames_btn.onclick = function() { window.location.href = 'https://policere.github.io/games' }
+					mp_btn.onclick = function() { window.location.href = 'https://policere.github.io/en/'; }
+					mygames_btn.onclick = function() { window.location.href = 'https://policere.github.io/en/games' }
 					myprogs_btn.onclick = function() { window.location.href = '#' }
-					aboutm_btn.onclick = function() { window.location.href = 'https://policere.github.io/aboutmeandnews' }
+					aboutm_btn.onclick = function() { window.location.href = 'https://policere.github.io/en/aboutmeandnews' }
 				</script>
 			</form>
 		</div>

@@ -2,7 +2,7 @@
 <html>
 	<head>
 
-		<title>Игры | theskrutter</title>
+		<title>Games | theskrutter</title>
 		<style>
 			quote 
 			{
@@ -60,6 +60,11 @@
 			{
 				background-color: #f2f2f2;
 			}
+			img.langimg
+			{
+				position: fixed;
+				right: 10px;
+			}
 		</style>
 	</head>
 
@@ -70,6 +75,7 @@
 				<input type="button" value="Игры" id="MyGamesBtn" class="headbtna">
 				<input type="button" value="Проекты" id="MyProgsBtn" class="headbtn">
 				<input type="button" value="Про меня и мои новости" id="AboutMBtn" class="headbtn">
+				<img src="img/en.png" width=42 height=32 class="langimg" id="langimg">
 				<script>
 					var mp_btn = document.getElementById('MainPageBtn');
 					var mygames_btn = document.getElementById('MyGamesBtn');
@@ -80,12 +86,13 @@
 					mygames_btn.onclick = function() { window.location.href = '#' }
 					myprogs_btn.onclick = function() { window.location.href = 'https://policere.github.io/en/projects' }
 					aboutm_btn.onclick = function() { window.location.href = 'https://policere.github.io/en/aboutmeandnews' }
+					document.getElementById('langimg').onclick = function() { window.location.href = 'https://policere.github.io/ru/'  }
 				</script>
 			</form>
 		</div>
 		<br><br>
 		<div id="ContentDiv">
-			<div class="stdivtext" style="text-align: center;"><sttext>Тут пока ничего нету.</sttext></div>
+			<div class="stdivtext" style="text-align: center;"><sttext>There is nothing here yet.</sttext></div>
 		</div>
 	</body>
 </html>
