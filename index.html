@@ -6,28 +6,10 @@
 		<script>
 			var locale = navigator.userLanguage || navigator.language || NaN;
 			var pageloaded = false;
-			if (locale == NaN)
-			{
-				alert("An error ocuraied on getting language")
-			}
-			if (locale == "ru-RU")
-			{
-				window.location.href = "https://policere.github.io/ru/";
-				pageloaded = true
-			} 
-			else 
-			{
-				if (locale != "en-US" || locale != "en")
-				{
-					alert("We don't support you language!\nYou locale: ("+locale+").")
-				}
-				window.location.href = "https://policere.github.io/en/";
-				pageloaded = true;
-			}
-			if (!pageloaded)
-			{
-				alert("Unkown error!")
-			}
+			var support_enru = false;
+			function LoadByLanguage(){if (locale == NaN){alert("Возникла внутрення серверная ошибка, обратитесь к разработчику\nAn internal error was occuraied, contact with developer (Code: HJ11)")}if (locale=="ru-RU"){window.location.href = "https://policere.github.io/ru/";pageloaded = true;}else{if(locale!="en-US"||locale!="en"){alert("We don't support you language!\nYou locale: ("+locale+").")}window.location.href = "https://policere.github.io/en/";pageloaded = true;};if (!pageloaded){alert("Неизвестная ошибка!\nUnkown error!")}	}
+			if(support_enru){LoadByLanguage()}
+			else{alert('Мы отключили поддержку английского языка. Нажмите продолжить, чтобы продолжить на русском языке!');window.location.href = "https://policere.github.io/ru/";pageloaded = true;}
 		</script>
 	</body>
 </html>
